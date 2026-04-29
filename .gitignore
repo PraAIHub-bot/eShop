@@ -491,3 +491,8 @@ $RECYCLE.BIN/
 /playwright/.auth/
 /user.json
 .azure
+
+# Claude Code agent files (do not commit)
+.claude/
+.claudeignore
+CLAUDE.md

@@ -45,8 +45,8 @@ var orderingApi = builder.AddProject<Projects.Ordering_API>("ordering-api")
 
 builder.AddProject<Projects.OrderProcessor>("order-processor")
     .WithReference(rabbitMq).WaitFor(rabbitMq)
-    .WithReference(orderDb)
-    .WaitFor(orderingApi); // wait for the orderingApi to be ready because that contains the EF migrations
+    .WithReference(orderDb).WaitFor(orderDb)
+    .WaitFor(orderingApi); // wait for orderingApi as it contains the EF migrations
 
 builder.AddProject<Projects.PaymentProcessor>("payment-processor")
     .WithReference(rabbitMq).WaitFor(rabbitMq);

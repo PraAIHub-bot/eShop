@@ -492,7 +492,11 @@ $RECYCLE.BIN/
 /user.json
 .azure
 
-# Claude Code agent files
+# Claude Code agent artifacts
 .claude/
 .claudeignore
 CLAUDE.md
+HANDOFF-JOURNAL.md
+TICKET-CONTEXT.yaml
+.git-credential-helper.sh
+.mcp-config.json
